@@ -28,12 +28,12 @@ public struct Int3
 
 	public Int3 (Vector3 position)
 	{
-		x = (int)System.Math.Round (position.x * FloatPrecision);
-		y = (int)System.Math.Round (position.y * FloatPrecision);
-		z = (int)System.Math.Round (position.z * FloatPrecision);
-		//x = Mathf.RoundToInt (position.x);
-		//y = Mathf.RoundToInt (position.y);
-		//z = Mathf.RoundToInt (position.z);
+		x = (int)System.Math.Floor (position.x * FloatPrecision);
+		y = (int)System.Math.Floor (position.y * FloatPrecision);
+		z = (int)System.Math.Floor (position.z * FloatPrecision);
+		//x = Mathf.FloorToInt (position.x);
+		//y = Mathf.FloorToInt (position.y);
+		//z = Mathf.FloorToInt (position.z);
 	}
 
 
@@ -61,11 +61,11 @@ public struct Int3
 	public static explicit operator Int3 (Vector3 ob)
 	{
 		return new Int3 (
-			(int)System.Math.Round (ob.x * FloatPrecision),
-			(int)System.Math.Round (ob.y * FloatPrecision),
-			(int)System.Math.Round (ob.z * FloatPrecision)
+			(int)System.Math.Floor (ob.x * FloatPrecision),
+			(int)System.Math.Floor (ob.y * FloatPrecision),
+			(int)System.Math.Floor (ob.z * FloatPrecision)
 		);
-		//return new Int3 (Mathf.RoundToInt (ob.x*FloatPrecision),Mathf.RoundToInt (ob.y*FloatPrecision),Mathf.RoundToInt (ob.z*FloatPrecision));
+		//return new Int3 (Mathf.FloorToInt (ob.x*FloatPrecision),Mathf.FloorToInt (ob.y*FloatPrecision),Mathf.FloorToInt (ob.z*FloatPrecision));
 	}
 
 	public static explicit operator Vector3 (Int3 ob)
@@ -100,27 +100,27 @@ public struct Int3
 
 	public static Int3 operator * (Int3 lhs, float rhs)
 	{
-		lhs.x = (int)System.Math.Round (lhs.x * rhs);
-		lhs.y = (int)System.Math.Round (lhs.y * rhs);
-		lhs.z = (int)System.Math.Round (lhs.z * rhs);
+		lhs.x = (int)System.Math.Floor (lhs.x * rhs);
+		lhs.y = (int)System.Math.Floor (lhs.y * rhs);
+		lhs.z = (int)System.Math.Floor (lhs.z * rhs);
 
 		return lhs;
 	}
 
 	public static Int3 operator * (Int3 lhs, Vector3 rhs)
 	{
-		lhs.x = (int)System.Math.Round (lhs.x * rhs.x);
-		lhs.y =	(int)System.Math.Round (lhs.y * rhs.y);
-		lhs.z = (int)System.Math.Round (lhs.z * rhs.z);
+		lhs.x = (int)System.Math.Floor (lhs.x * rhs.x);
+		lhs.y =	(int)System.Math.Floor (lhs.y * rhs.y);
+		lhs.z = (int)System.Math.Floor (lhs.z * rhs.z);
 
 		return lhs;
 	}
 
 	public static Int3 operator / (Int3 lhs, float rhs)
 	{
-		lhs.x = (int)System.Math.Round (lhs.x / rhs);
-		lhs.y = (int)System.Math.Round (lhs.y / rhs);
-		lhs.z = (int)System.Math.Round (lhs.z / rhs);
+		lhs.x = (int)System.Math.Floor (lhs.x / rhs);
+		lhs.y = (int)System.Math.Floor (lhs.y / rhs);
+		lhs.z = (int)System.Math.Floor (lhs.z / rhs);
 		return lhs;
 	}
 
@@ -150,9 +150,9 @@ public struct Int3
 		y *= newMagn;
 		z *= newMagn;
 
-		x = (int)System.Math.Round (x / magn);
-		y = (int)System.Math.Round (y / magn);
-		z = (int)System.Math.Round (z / magn);
+		x = (int)System.Math.Floor (x / magn);
+		y = (int)System.Math.Floor (y / magn);
+		z = (int)System.Math.Floor (z / magn);
 
 		return this;
 	}
@@ -179,7 +179,7 @@ public struct Int3
 		  */
 	public int costMagnitude {
 		get {
-			return (int)System.Math.Round (magnitude);
+			return (int)System.Math.Floor (magnitude);
 		}
 	}
 

@@ -194,7 +194,7 @@ Transform:
   m_GameObject: {fileID: 201212755}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.8710539, y: -0.2739215, z: 0.16609025}
-  m_LocalScale: {x: 3, y: 1, z: 3}
+  m_LocalScale: {x: 12, y: 1, z: 12}
   m_Children: []
   m_Father: {fileID: 1594781105}
   m_RootOrder: 1
@@ -380,6 +380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursor: {fileID: 1296969304}
   buildingBlockPreview: {fileID: 0}
+  previewColor: {r: 0.5019608, g: 1, b: 0.5, a: 0.5}
   buildingBlockIdx: 0
   allBlockPrefabs:
   - {fileID: 114908524176318236, guid: 2dd96122d27b743d9a68c4a41de90a4b, type: 2}

@@ -21,6 +21,10 @@ public class BuildingGrid3D : MonoBehaviour {
 		return cell;
 	}
 
+	public void SetCell(Int3 gridPos, BuildingBlock block) {
+		cells.Add(gridPos, block);
+	}
+
 //	public BuildingBlock GetOrCreateCell(Int3 gridPos) {
 //		BuildingBlock cell;
 //		if (!cells.TryGetValue (gridPos, out cell)) {
