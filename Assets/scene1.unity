@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -246,6 +246,15 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1421942939309764, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 23457605168320524, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 25f574902ffdce44ba71e02b722065ae, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_IsPrefabParent: 0
@@ -380,7 +389,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursor: {fileID: 1296969304}
   buildingBlockPreview: {fileID: 0}
-  previewColor: {r: 0.5019608, g: 1, b: 0.5, a: 0.5}
+  goodPreviewColor: {r: 0.5, g: 1, b: 0.5, a: 0.5}
+  badPreviewColor: {r: 1, g: 0.5, b: 0.5, a: 0.5}
   buildingBlockIdx: 0
   allBlockPrefabs:
   - {fileID: 114908524176318236, guid: 2dd96122d27b743d9a68c4a41de90a4b, type: 2}

@@ -23,6 +23,7 @@ public class BuildingGrid3D : MonoBehaviour {
 
 	public void SetCell(Int3 gridPos, BuildingBlock block) {
 		cells.Add(gridPos, block);
+		block.transform.SetParent (transform, true);
 	}
 
 //	public BuildingBlock GetOrCreateCell(Int3 gridPos) {

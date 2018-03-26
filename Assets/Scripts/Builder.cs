@@ -16,6 +16,12 @@ public class Builder : MonoBehaviour {
 		}
 	}
 
+	public bool IsShowingPreview {
+		get {
+			return buildingBlockPreview != null;
+		}
+	}
+
 	void Update () {
 		for (var i = 0; i < allBlockPrefabs.Length; ++i) {
 			if (Input.GetKeyDown ((KeyCode)((int)KeyCode.Alpha1 + i))) {
@@ -30,7 +36,10 @@ public class Builder : MonoBehaviour {
 			TryBuild ();
 		}
 
-		UpdatePreviewPosition ();
+		if (IsShowingPreview) {
+			UpdatePreviewPosition ();
+			UpdatePreviewStatusColor ();
+		}
 	}
 
 	bool IsCellOccupied() {
@@ -68,11 +77,9 @@ public class Builder : MonoBehaviour {
 	}
 
 	void UpdatePreviewPosition() {
-		if (buildingBlockPreview) {
-			SetBlockPosition (buildingBlockPreview);
+		SetBlockPosition (buildingBlockPreview);
 
-			//print (cursor.transform.position + ", " + pos);
-		}
+		//print (cursor.transform.position + ", " + pos);
 	}
 
 	void UpdatePreviewStatusColor() {
@@ -92,7 +99,7 @@ public class Builder : MonoBehaviour {
 
 
 	public void TryBuild() {
-		if (buildingBlockPreview && !IsCellOccupied()) {
+		if (IsShowingPreview && !IsCellOccupied()) {
 			// make it official!
 			var newBlock = BuildBlock(CurrentPrefab);
 			BuildingGrid3D.instance.SetCell(cursor.GetCellGridPos(), newBlock);

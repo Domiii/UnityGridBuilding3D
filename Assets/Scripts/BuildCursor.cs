@@ -4,13 +4,27 @@ using UnityEngine;
 
 public class BuildCursor : MonoBehaviour {
 	public Transform feet;
+	Vector3 targetPos;
+	Vector3 cameraCenter = new Vector3(.5f, .5f, 0);
 
 	void Start () {
-		
+		targetPos = transform.localPosition;
 	}
 
 	void Update () {
-		
+		CorrectPosition ();
+	}
+
+	void CorrectPosition () {
+		var ray = Camera.main.ViewportPointToRay (cameraCenter);
+		RaycastHit hit;
+		if (Physics.Raycast (ray, out hit) && hit.distance < targetPos.z) {
+			// physical obstacles hinder our view
+			transform.position = hit.point;
+		} else {
+			transform.localPosition = targetPos;
+		}
+		//transform.localPosition = ;
 	}
 
 //	public BuildingGridCell GetCell() {
