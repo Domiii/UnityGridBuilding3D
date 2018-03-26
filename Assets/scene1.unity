@@ -206,6 +206,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114057779787053346, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: allBlockPrefabs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.57277375
@@ -255,6 +260,18 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 25f574902ffdce44ba71e02b722065ae, type: 2}
+    - target: {fileID: 114057779787053346, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: allBlockPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 114445634662471188, guid: a1e53165886c34b04aa97fdf3b4081b4,
+        type: 2}
+    - target: {fileID: 114057779787053346, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: allBlockPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 114908524176318236, guid: 2dd96122d27b743d9a68c4a41de90a4b,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_IsPrefabParent: 0
@@ -352,6 +369,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cellPrefab: {fileID: 0}
   cellSize: 3
+  allBlockPrefabs:
+  - {fileID: 114908524176318236, guid: 2dd96122d27b743d9a68c4a41de90a4b, type: 2}
+  - {fileID: 114445634662471188, guid: a1e53165886c34b04aa97fdf3b4081b4, type: 2}
 --- !u!4 &1095022281
 Transform:
   m_ObjectHideFlags: 0
@@ -370,12 +390,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1421942939309764, guid: 5e9e851c0e142814dac026a256ba2ac0,
     type: 2}
   m_PrefabInternal: {fileID: 233373025}
---- !u!114 &1296969304 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114057779787053346, guid: 5e9e851c0e142814dac026a256ba2ac0,
-    type: 2}
-  m_PrefabInternal: {fileID: 233373025}
-  m_Script: {fileID: 11500000, guid: 76c1257681e8c4a7e997ca5c94e0bf3a, type: 3}
 --- !u!114 &1296969305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,14 +401,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89b65dd0455d9431999c66fd79afedc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursor: {fileID: 1296969304}
-  buildingBlockPreview: {fileID: 0}
-  goodPreviewColor: {r: 0.5, g: 1, b: 0.5, a: 0.5}
-  badPreviewColor: {r: 1, g: 0.5, b: 0.5, a: 0.5}
-  buildingBlockIdx: 0
-  allBlockPrefabs:
-  - {fileID: 114908524176318236, guid: 2dd96122d27b743d9a68c4a41de90a4b, type: 2}
-  - {fileID: 114445634662471188, guid: a1e53165886c34b04aa97fdf3b4081b4, type: 2}
 --- !u!1 &1594781104
 GameObject:
   m_ObjectHideFlags: 0
